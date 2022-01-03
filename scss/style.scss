@@ -1,0 +1,15 @@
+$red: #f00;
+
+.text-red {
+	font-size: 24px;
+	color: $red;
+	letter-spacing: 0.05em;
+
+	&::after {
+		content: "";
+	}
+
+	span {
+		font-size: 16px;
+	}
+}

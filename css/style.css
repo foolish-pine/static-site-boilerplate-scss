@@ -1,0 +1,13 @@
+.text-red {
+  font-size: 24px;
+  color: #f00;
+  letter-spacing: 0.05em;
+}
+
+.text-red::after {
+  content: "";
+}
+
+.text-red span {
+  font-size: 16px;
+}

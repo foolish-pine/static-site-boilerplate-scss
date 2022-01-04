@@ -4,6 +4,13 @@
 - HTML、SCSS、JavaScriptの使用を想定しています
 - 必要に応じて拡張することができます
 
+## 使い方
+1. zip形式で本レポジトリをダウンロードする
+2. zipファイルを解凍し、フォルダ名を任意のプロジェクト名に変更する
+3. プロジェクトのディレクトリに移動し、`npm i`コマンドを実行してパッケージをインストールする
+4. [必要なVisual Studio Codeプラグイン](https://github.com/foolish-pine/static-site-boilerplate-scss#visual-studio-code%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3)をインストール・有効化する
+5. 必要に応じて、README.mdや.gitignore、各種設定ファイルを編集する
+
 ## 設定ファイルについての説明
 ### .vscodeディレクトリ
 Visual Studio Codeの設定ファイルを格納するディレクトリ。<br>

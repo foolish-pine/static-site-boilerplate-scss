@@ -10,6 +10,7 @@
 3. プロジェクトのディレクトリに移動し、`npm i`コマンドを実行してパッケージをインストールする
 4. [必要なVisual Studio Codeプラグイン](https://github.com/foolish-pine/static-site-boilerplate-scss#visual-studio-code%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3)をインストール・有効化する
 5. 必要に応じて、README.mdや各種設定ファイルを編集する
+6. コーディングを開始する
 
 ## 設定ファイルについての説明
 ### .vscodeディレクトリ

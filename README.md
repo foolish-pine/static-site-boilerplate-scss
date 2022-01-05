@@ -89,7 +89,19 @@ stylelintの設定ファイル。使用するルールについては後述。
 - ベースのルールとして[stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss)を使用する
 - 以下のルールを追加する
 
-["no-duplicate-dollar-variables": true](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/no-duplicate-dollar-variables)<br>
+["selector-class-pattern": null](https://stylelint.io/user-guide/rules/list/selector-class-pattern/)<br>
+classセレクタの命名パターンを制限しない。
+
+["keyframes-name-pattern": null](https://stylelint.io/user-guide/rules/list/keyframes-name-pattern/)<br>
+keyframeの命名パターンを制限しない。
+
+["scss/at-mixin-pattern": null](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-pattern)<br>
+mixinの命名パターンを制限しない。
+
+["scss/dollar-variable-pattern": null](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/dollar-variable-pattern)<br>
+変数の命名パターンを制限しない。
+
+["scss/no-duplicate-dollar-variables": true](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/no-duplicate-dollar-variables)<br>
 変数宣言の重複を許容しない。
 ```
 // 以下は許容されない

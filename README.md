@@ -89,11 +89,17 @@ stylelintの設定ファイル。使用するルールについては後述。
 - ベースのルールとして[stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss)を使用する
 - 以下のルールを追加する
 
+["keyframes-name-pattern": null](https://stylelint.io/user-guide/rules/list/keyframes-name-pattern/)<br>
+keyframeの命名パターンを制限しない。
+
 ["selector-class-pattern": null](https://stylelint.io/user-guide/rules/list/selector-class-pattern/)<br>
 classセレクタの命名パターンを制限しない。
 
-["keyframes-name-pattern": null](https://stylelint.io/user-guide/rules/list/keyframes-name-pattern/)<br>
-keyframeの命名パターンを制限しない。
+["selector-id-pattern": null](https://stylelint.io/user-guide/rules/list/selector-id-pattern/)<br>
+idセレクタの命名パターンを制限しない。
+
+["scss/at-function-pattern": null](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/at-function-pattern)<br>
+functionの命名パターンを制限しない。
 
 ["scss/at-mixin-pattern": null](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-pattern)<br>
 mixinの命名パターンを制限しない。
@@ -108,6 +114,9 @@ mixinの命名パターンを制限しない。
 $red: red;
 $red: blue;
 ```
+
+["scss/percent-placeholder-pattern": null](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/percent-placeholder-pattern)<br>
+`%`-placeholderの命名パターンを制限しない。
 
 ### フォーマッター
 - [Prettier](https://prettier.io/)を使用する

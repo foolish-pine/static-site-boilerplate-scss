@@ -6,9 +6,6 @@
 	"globals": {},
 	"extends": ["eslint:recommended", "prettier"],
 	"rules": {
-		"semi": ["error", "always"],
-		"quotes": ["error", "double"],
-		"comma-dangle": ["error", "always"],
 		"no-alert": "warn",
 		"no-console": "warn",
 		"no-unused-vars": "warn",

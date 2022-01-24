@@ -53,7 +53,8 @@ stylelintの設定ファイル。使用するルールについては後述。
 本ドキュメント。プロジェクトに応じて編集可。
 
 ## コーディング全般
-### 対応ブラウザ
+### コーディング全般
+#### 対応ブラウザ
 以下のブラウザの最新バージョンを対応ブラウザとする。
 - iOS Safari
 - Android Google Chrome
@@ -64,7 +65,7 @@ stylelintの設定ファイル。使用するルールについては後述。
 
 プロジェクトの要件に合わせて変更すること。
 
-### [EditorConfig](https://editorconfig.org/)のルール
+#### [EditorConfig](https://editorconfig.org/)のルール
 - `indent_style = tab` … インデントにタブを使用する。この選択は[WordPressのコーディング規約](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/#indentation)に依る。プロジェクトの要件に合わせて変更してもよい
 - `indent_size = 2` … インデントサイズは2とする。プロジェクトの要件に合わせて変更してもよい
 - `end_of_line = lf` … 改行コードはLFとする
@@ -72,19 +73,27 @@ stylelintの設定ファイル。使用するルールについては後述。
 - `trim_trailing_whitespace = true` … 文末のスペースを削除する
 - `insert_final_newline = true` … ファイルの最終行に空行を挿入する
 
-### コメント
+#### コメント
 必要に応じてコメントを挿入する。<br>
 ただし、不要なコメントは削除する。なんらかの理由でコメントアウトしたコードを残す場合は、その理由もコメントで残しておく。
 
-## HTML
-### フォーマッター
+#### Visual Studio Codeプラグイン
+以下のプラグインを使用すること。
+
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+### HTML
+#### フォーマッター
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)を使用する
 
-## CSS
+### CSS
 原則として、SCSSファイルをコンパイルして生成したCSSファイルを直接編集することは禁止する。
 
-## SCSS
-### リンター
+### SCSS
+#### リンター
 - [stylelint](https://stylelint.io/)を使用する
 - ベースのルールとして[stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss)を使用する
 - 以下のルールを追加する
@@ -130,13 +139,13 @@ $red: blue;
 ["scss/percent-placeholder-pattern": null](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/percent-placeholder-pattern)<br>
 `%`-placeholderの命名パターンを制限しない。
 
-### フォーマッター
+#### フォーマッター
 - [Prettier](https://prettier.io/)を使用する
 - ベースのルールとして[stylelint-prettier/recommended](https://github.com/prettier/stylelint-prettier)を使用する
 - プロパティの並び順は[stylelint-config-recess-order](https://github.com/stormwarning/stylelint-config-recess-order)に準拠する
 
-## JavaScript
-### リンター
+### JavaScript
+#### リンター
 - [ESLint](https://eslint.org/)を使用する
 - ベースのルールとして[eslint:recommended](https://eslint.org/docs/rules/)を使用する
 - 加えて、以下のルールを追加する。ルールの詳細は[こちら](https://eslint.org/docs/rules/)を参照すること。
@@ -146,13 +155,5 @@ $red: blue;
 	- `"no-var": "warn"` … `var`が使用されていたら警告する
 	- `"eqeqeq": "warn"` … `==`または`!=`が使用されていたら警告する
 
-### フォーマッター
+#### フォーマッター
 - [Prettier](https://prettier.io/)を使用する
-
-## Visual Studio Codeプラグイン
-以下のプラグインを使用すること。
-
-- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)

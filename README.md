@@ -1,4 +1,4 @@
-# 静的サイトボイラープレート（最小構成 + SCSS）
+# 静的サイトボイラープレート（HTML + SCSS + JS + Prettier + stylelint + ESLint）
 - 静的サイト制作のためのボイラープレートです
 - Visual Studio CodeとそのプラグインおよびNode.jsを使用します
 - HTML、SCSS、JavaScriptの使用を想定しています
@@ -17,8 +17,8 @@ Node.js v16.13.1
 
 ## 設定ファイルについての説明
 ### .vscodeディレクトリ
-Visual Studio Codeの設定ファイルを格納するディレクトリ。<br>
-このディレクトリのファイルに記述した設定はプロジェクト内でのみ有効となる。個人の環境に応じて新規ファイルを追加してよい。<br>
+Visual Studio Codeの設定ファイルを格納するディレクトリ。  
+このディレクトリのファイルに記述した設定はプロジェクト内でのみ有効となる。個人の環境に応じて新規ファイルを追加してよい。  
 
 ### .vscode/extensions.json
 プロジェクトにおけるVisual Studio Codeの推奨プラグインを記述したファイル。
@@ -26,26 +26,26 @@ Visual Studio Codeの設定ファイルを格納するディレクトリ。<br>
 ### .vscode/settings.json
 Visual Studio Codeの設定ファイル。個人の環境に応じて編集可。
 
-### .gitignore
-Gitの追跡対象にしないファイル・ディレクトリを記述する。必要に応じて追記可。<br>
-プロジェクトをGitで管理する場合、以下のファイル・ディレクトリは追跡対象としない。
-- `node_modules`
-- `.DS_Store`
-
 ### .editorconfig
 EditorConfigの設定ファイル。使用するルールについては後述。
 
 ### .eslintrc.json
 ESlintの設定ファイル。使用するルールについては後述。
 
+### .gitignore
+Gitの追跡対象にしないファイル・ディレクトリを記述する。必要に応じて追記可。  
+プロジェクトをGitで管理する場合、以下のファイル・ディレクトリは追跡対象としない。
+- `node_modules`
+- `.DS_Store`
+
 ### .stylelintrc.json
 stylelintの設定ファイル。使用するルールについては後述。
 
-### package.json
-プロジェクトで使用するパッケージを記載したファイル。
-
 ### package-lock.json
 使用するパッケージのバージョンを固定するためのファイル。
+
+### package.json
+プロジェクトで使用するパッケージを記載したファイル。
 
 ### README.md
 本ドキュメント。プロジェクトに応じて編集可。
@@ -68,11 +68,11 @@ stylelintの設定ファイル。使用するルールについては後述。
 - `indent_size = 2` … インデントサイズは2とする。プロジェクトの要件に合わせて変更してもよい
 - `end_of_line = lf` … 改行コードはLFとする
 - `charset = utf-8` … 文字コードはUTF-8とする
-- `trim_trailing_whitespace = true` … 文末のスペースを削除する
+- `trim_trailing_whitespace = true` … 文末のスペースを削除する。ただし、`.md`ファイルでは`false`
 - `insert_final_newline = true` … ファイルの最終行に空行を挿入する
 
 #### コメント
-必要に応じてコメントを挿入する。<br>
+必要に応じてコメントを挿入する。  
 ただし、不要なコメントは削除する。なんらかの理由でコメントアウトしたコードを残す場合は、その理由もコメントで残しておく。
 
 #### Visual Studio Codeプラグイン
@@ -88,7 +88,7 @@ stylelintの設定ファイル。使用するルールについては後述。
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)を使用する
 
 ### CSS
-原則として、SCSSファイルをコンパイルして生成したCSSファイルを直接編集することは禁止する。
+- 原則として、SCSSファイルをコンパイルして生成したCSSファイルを直接編集することは禁止する。
 
 ### SCSS
 #### リンター
@@ -96,7 +96,7 @@ stylelintの設定ファイル。使用するルールについては後述。
 - ベースのルールとして[stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss)を使用する
 - 以下のルールを追加する
 
-["declaration-block-no-duplicate-properties": true](https://stylelint.io/user-guide/rules/list/declaration-block-no-duplicate-properties/)<br>
+[`"declaration-block-no-duplicate-properties": true`](https://stylelint.io/user-guide/rules/list/declaration-block-no-duplicate-properties/)  
 プロパティの重複を許容しない。
 ```
 // 以下は許容されない
@@ -106,7 +106,7 @@ a {
 }
 ```
 
-["declaration-block-no-redundant-longhand-properties": null](https://stylelint.io/user-guide/rules/list/declaration-block-no-redundant-longhand-properties/)<br>
+[`"declaration-block-no-redundant-longhand-properties": null`](https://stylelint.io/user-guide/rules/list/declaration-block-no-redundant-longhand-properties/)  
 プロパティのロングハンド指定を許容する。
 ```
 // 以下は許容される
@@ -118,25 +118,25 @@ a {
 }
 ```
 
-["keyframes-name-pattern": null](https://stylelint.io/user-guide/rules/list/keyframes-name-pattern/)<br>
+[`"keyframes-name-pattern": null`](https://stylelint.io/user-guide/rules/list/keyframes-name-pattern/)  
 keyframeの命名パターンを制限しない。
 
-["selector-class-pattern": null](https://stylelint.io/user-guide/rules/list/selector-class-pattern/)<br>
+[`"selector-class-pattern": null`](https://stylelint.io/user-guide/rules/list/selector-class-pattern/)  
 classセレクタの命名パターンを制限しない。
 
-["selector-id-pattern": null](https://stylelint.io/user-guide/rules/list/selector-id-pattern/)<br>
+[`"selector-id-pattern": null`](https://stylelint.io/user-guide/rules/list/selector-id-pattern/)  
 idセレクタの命名パターンを制限しない。
 
-["scss/at-function-pattern": null](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/at-function-pattern)<br>
+[`"scss/at-function-pattern": null`](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/at-function-pattern)  
 functionの命名パターンを制限しない。
 
-["scss/at-mixin-pattern": null](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-pattern)<br>
+[`"scss/at-mixin-pattern": null`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-pattern)  
 mixinの命名パターンを制限しない。
 
-["scss/dollar-variable-pattern": null](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/dollar-variable-pattern)<br>
+[`"scss/dollar-variable-pattern": null`](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/dollar-variable-pattern)  
 変数の命名パターンを制限しない。
 
-["scss/no-duplicate-dollar-variables": true](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/no-duplicate-dollar-variables)<br>
+[`"scss/no-duplicate-dollar-variables": true`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/no-duplicate-dollar-variables)  
 変数宣言の重複を許容しない。
 ```
 // 以下は許容されない
@@ -144,7 +144,7 @@ $red: red;
 $red: blue;
 ```
 
-["scss/percent-placeholder-pattern": null](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/percent-placeholder-pattern)<br>
+[`"scss/percent-placeholder-pattern": null`](https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules/percent-placeholder-pattern)  
 `%`-placeholderの命名パターンを制限しない。
 
 #### フォーマッター
@@ -156,12 +156,22 @@ $red: blue;
 #### リンター
 - [ESLint](https://eslint.org/)を使用する
 - ベースのルールとして[eslint:recommended](https://eslint.org/docs/rules/)を使用する
-- 加えて、以下のルールを追加する。ルールの詳細は[こちら](https://eslint.org/docs/rules/)を参照すること。
-	- `"no-alert": "warn"` … `alert`, `confirm`, `prompt`が使用されていたら警告する
-	- `"no-console": "warn"` … `console`が使用されていたら警告する
-	- `"no-unused-vars": "warn"` … 未使用の変数があれば警告する
-	- `"no-var": "warn"` … `var`が使用されていたら警告する
-	- `"eqeqeq": "warn"` … `==`または`!=`が使用されていたら警告する
+- 加えて、以下のルールを追加する。ルールの詳細は[こちら](https://eslint.org/docs/rules/)を参照すること
+
+`"no-alert""warn"`  
+`alert`, `confirm`, `prompt`が使用されていたら警告する。
+
+`"no-console""warn"`  
+`console`が使用されていたら警告する。
+
+`"no-unused-vars": "warn"`  
+未使用の変数があれば警告する。
+
+`"no-var": "warn"`  
+`var`が使用されていたら警告する。
+
+`"eqeqeq": "warn"`  
+`==`または`!=`が使用されていたら警告する。
 
 #### フォーマッター
 - [Prettier](https://prettier.io/)を使用する

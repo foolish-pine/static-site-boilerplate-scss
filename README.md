@@ -2,7 +2,7 @@
 - 静的サイト制作のためのボイラープレートです
 - Visual Studio CodeとそのプラグインおよびNode.jsを使用します
 - HTML、SCSS、JavaScriptの使用を想定しています
-- 必要に応じて拡張することができます
+- 各種設定は必要に応じて変更してください
 
 ## 動作確認環境
 Node.js v16.13.1
@@ -18,13 +18,13 @@ Node.js v16.13.1
 ## 設定ファイルについての説明
 ### .vscodeディレクトリ
 Visual Studio Codeの設定ファイルを格納するディレクトリ。  
-このディレクトリのファイルに記述した設定はプロジェクト内でのみ有効となる。個人の環境に応じて新規ファイルを追加してよい。  
+このディレクトリのファイルに記述した設定はプロジェクト内でのみ有効となる。
 
 ### .vscode/extensions.json
 プロジェクトにおけるVisual Studio Codeの推奨プラグインを記述したファイル。
 
 ### .vscode/settings.json
-Visual Studio Codeの設定ファイル。個人の環境に応じて編集可。
+Visual Studio Codeの設定ファイル。
 
 ### .editorconfig
 EditorConfigの設定ファイル。使用するルールについては後述。
@@ -33,7 +33,7 @@ EditorConfigの設定ファイル。使用するルールについては後述�
 ESlintの設定ファイル。使用するルールについては後述。
 
 ### .gitignore
-Gitの追跡対象にしないファイル・ディレクトリを記述する。必要に応じて追記可。  
+Gitの追跡対象にしないファイル・ディレクトリを記述する。  
 プロジェクトをGitで管理する場合、以下のファイル・ディレクトリは追跡対象としない。
 - `node_modules`
 - `.DS_Store`
@@ -48,7 +48,7 @@ stylelintの設定ファイル。使用するルールについては後述。
 プロジェクトで使用するパッケージを記載したファイル。
 
 ### README.md
-本ドキュメント。プロジェクトに応じて編集可。
+本ドキュメント。
 
 ## コーディングルール
 ### コーディング全般
@@ -64,8 +64,8 @@ stylelintの設定ファイル。使用するルールについては後述。
 プロジェクトの要件に合わせて変更すること。
 
 #### [EditorConfig](https://editorconfig.org/)のルール
-- `indent_style = tab` … インデントにタブを使用する。この選択は[WordPressのコーディング規約](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/#indentation)に依る。プロジェクトの要件に合わせて変更してもよい
-- `indent_size = 2` … インデントサイズは2とする。プロジェクトの要件に合わせて変更してもよい
+- `indent_style = tab` … インデントにタブを使用する。この選択は[WordPressのコーディング規約](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/#indentation)に依る
+- `indent_size = 2` … インデントサイズは2とする
 - `end_of_line = lf` … 改行コードはLFとする
 - `charset = utf-8` … 文字コードはUTF-8とする
 - `trim_trailing_whitespace = true` … 文末のスペースを削除する。ただし、`.md`ファイルでは`false`

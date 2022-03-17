@@ -16,38 +16,38 @@ Node.js v16.13.1
 6. コーディングを開始する
 
 ## 設定ファイルについての説明
-### .vscodeディレクトリ
+- .vscodeディレクトリ  
 Visual Studio Codeの設定ファイルを格納するディレクトリ。  
 このディレクトリのファイルに記述した設定はプロジェクト内でのみ有効となる。
 
-### .vscode/extensions.json
+- .vscode/extensions.json  
 プロジェクトにおけるVisual Studio Codeの推奨プラグインを記述したファイル。
 
-### .vscode/settings.json
+- .vscode/settings.json  
 Visual Studio Codeの設定ファイル。
 
-### .editorconfig
+- .editorconfig  
 EditorConfigの設定ファイル。使用するルールについては後述。
 
-### .eslintrc.json
+- .eslintrc.json  
 ESlintの設定ファイル。使用するルールについては後述。
 
-### .gitignore
+- .gitignore  
 Gitの追跡対象にしないファイル・ディレクトリを記述する。  
 プロジェクトをGitで管理する場合、以下のファイル・ディレクトリは追跡対象としない。
 - `node_modules`
 - `.DS_Store`
 
-### .stylelintrc.json
+- .stylelintrc.json  
 stylelintの設定ファイル。使用するルールについては後述。
 
-### package-lock.json
+- package-lock.json  
 使用するパッケージのバージョンを固定するためのファイル。
 
-### package.json
+- package.json  
 プロジェクトで使用するパッケージを記載したファイル。
 
-### README.md
+- README.md  
 本ドキュメント。
 
 ## コーディングルール

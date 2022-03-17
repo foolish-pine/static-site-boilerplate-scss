@@ -35,8 +35,8 @@ ESlintの設定ファイル。使用するルールについては後述。
 - .gitignore  
 Gitの追跡対象にしないファイル・ディレクトリを記述する。  
 プロジェクトをGitで管理する場合、以下のファイル・ディレクトリは追跡対象としない。
-- `node_modules`
-- `.DS_Store`
+	- `node_modules`
+	- `.DS_Store`
 
 - .stylelintrc.json  
 stylelintの設定ファイル。使用するルールについては後述。

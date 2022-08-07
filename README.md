@@ -64,12 +64,18 @@ stylelintの設定ファイル。使用するルールについては後述。
 プロジェクトの要件に合わせて変更すること。
 
 #### [EditorConfig](https://editorconfig.org/)のルール
-- `indent_style = tab` … インデントにタブを使用する。この選択は[WordPressのコーディング規約](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/#indentation)に依る
-- `indent_size = 2` … インデントサイズは2とする
-- `end_of_line = lf` … 改行コードはLFとする
-- `charset = utf-8` … 文字コードはUTF-8とする
-- `trim_trailing_whitespace = true` … 文末のスペースを削除する。ただし、`.md`ファイルでは`false`
-- `insert_final_newline = true` … ファイルの最終行に空行を挿入する
+- `indent_style = tab`  
+インデントにタブを使用する。この選択は[WordPressのコーディング規約](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/#indentation)に依る
+- `indent_size = 2`  
+インデントサイズは2とする
+- `end_of_line = lf`  
+改行コードはLFとする
+- `charset = utf-8`  
+文字コードはUTF-8とする
+- `trim_trailing_whitespace = true`  
+文末のスペースを削除する。ただし、`.md`ファイルでは`false`
+- `insert_final_newline = true`  
+ファイルの最終行に空行を挿入する
 
 #### コメント
 必要に応じてコメントを挿入する。  

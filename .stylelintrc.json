@@ -5,6 +5,14 @@
 		"stylelint-config-recess-order"
 	],
 	"rules": {
+		"at-rule-empty-line-before": [
+			"always",
+			{
+				"except": ["blockless-after-blockless", "first-nested"],
+				"ignore": ["after-comment"],
+				"ignoreAtRules": ["else"]
+			}
+		],
 		"declaration-block-no-duplicate-properties": true,
 		"declaration-block-no-redundant-longhand-properties": null,
 		"keyframes-name-pattern": null,

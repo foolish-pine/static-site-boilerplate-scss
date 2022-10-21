@@ -19,6 +19,6 @@
 		"stylelint-prettier": "^2.0.0"
 	},
 	"volta": {
-		"node": "16.17.0"
+		"node": "16.18.0"
 	}
 }

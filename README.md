@@ -1,5 +1,5 @@
-# 静的サイトボイラープレート（HTML + SCSS + JS + Prettier + stylelint + ESLint）
-- 静的サイト制作のためのボイラープレートです
+# Web制作ボイラープレート（HTML + SCSS + JS + Prettier + stylelint + ESLint）
+- Web制作のためのボイラープレートです
 - Visual Studio CodeとそのプラグインおよびNode.jsを使用します
 - HTML、SCSS、JavaScriptの使用を想定しています
 - 各種設定は必要に応じて変更してください
@@ -31,7 +31,7 @@ Visual Studio Codeの設定ファイル。
 EditorConfigの設定ファイル。使用するルールについては後述。
 
 - .eslintrc.json  
-ESlintの設定ファイル。使用するルールについては後述。
+ESLintの設定ファイル。使用するルールについては後述。
 
 - .gitignore  
 Gitの追跡対象にしないファイル・ディレクトリを記述する。  
